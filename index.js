@@ -44,7 +44,7 @@ app.post('/home', function (req, res) {
     if (intent === 'inform_task_description') {
         var taskDescription = req.body.result.parameters.task;
         addTask(taskDescription);
-        botSpeech = 'Äîáàâëåíèå çàäà÷è.';
+        botSpeech = 'hi.';
     }
     else if (intent === 'list_all_tasks') {
 
