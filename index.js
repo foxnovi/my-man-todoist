@@ -33,7 +33,7 @@ app.get('/', function (req, res) {
 })
 
 // Handle the intents
-app.post('/home', function (req, res) {
+app.post('/', function (req, res) {
 
     console.log('Request from DialogFlow:');
     console.log(req.body);
