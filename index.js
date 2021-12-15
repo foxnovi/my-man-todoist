@@ -52,9 +52,9 @@ app.post('/home', function (req, res) {
         
     }
     
-    var out = {speech: botSpeech,
-            displayText: botSpeech,
-            data: null}
+    var out = { textToSpeech: botSpeech,
+            ssml: botSpeech,
+            displayText: botSpeech}
     
     var outString = JSON.stringify(out);
     console.log('Out:' + outString);
