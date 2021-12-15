@@ -52,7 +52,7 @@ app.post('/home', function (req, res) {
         
     }
     
-    var out = {textToSpeech: botSpeech,
+    var out = {speech: botSpeech,
             displayText: botSpeech,
             data: null}
     
