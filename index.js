@@ -75,7 +75,7 @@ function addTask(taskDescription){
                'content': taskDescription
            }};
 
-    var url = 'https://todoist.com/api/v7/sync?token=' + todoist_token + 
+    var url = 'https://api.todoist.com/sync/v8/sync?token=' + todoist_token + 
                 '&sync_token=*&resource_types=["items"]&commands=[' + JSON.stringify(task) +']';
     console.log('URL:' + url);
     request({
@@ -94,7 +94,7 @@ function addTask(taskDescription){
 }
 
 function getAllTasks(){
-    var url = 'https://todoist.com/api/v7/sync?token=' + todoist_token + 
+    var url = 'https://api.todoist.com/sync/v8/sync?token=' + todoist_token + 
                     '&sync_token=*' + 
                     '&resource_types=["items"]';
     console.log('URL:' + url);
