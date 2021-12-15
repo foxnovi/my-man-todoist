@@ -4,33 +4,33 @@
 * Google Home 
 */
 
-const request = require('request')
-const syncrequest = require('sync-request')
-const express = require('express')
-const bodyParser = require('body-parser')
+const request = require('request');
+const syncrequest = require('sync-request');
+const express = require('express');
+const bodyParser = require('body-parser');
 const moment = require('moment');
 
-const uuid = require('node-uuid')
+const uuid = require('node-uuid');
 const todoist_token = '6ca51c23a14910bbfdbc28c93ae9ddb5f18cf1c6';
 
 
 
-const app = express()
+const app = express();
 
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 5000));
 
 // Process application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Process application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 // Index route
 app.get('/', function (req, res) {
     res.send('Hi')
-})
+});
 
 // Handle the intents
 app.post('home/', function (req, res) {
@@ -56,18 +56,18 @@ app.post('home/', function (req, res) {
         speech: botSpeech,
         displayText: botSpeech,
         data: null
-    };
+    }
 
     var outString = JSON.stringify(out);
     console.log('Out:' + outString);
 
     res.send(outString);
-})
+});
 
 // Spin up the server
 app.listen(app.get('port'), function () {
     console.log('running on port', app.get('port'))
-})
+});
 
 
 function addTask(taskDescription) {
@@ -77,8 +77,7 @@ function addTask(taskDescription) {
         'uuid': uuid.v4(),
         'args': {
             'content': taskDescription
-        }
-    };
+        }}
 
     var url = 'https://api.todoist.com/sync/v8/sync?token=' + todoist_token +
         '&sync_token=*&resource_types=["items"]&commands=[' + JSON.stringify(task) + ']';
