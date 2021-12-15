@@ -29,11 +29,11 @@ app.use(express.static('public'))
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Привет, я твой помощник.')
+    res.send('ГЏГ°ГЁГўГҐГІ, Гї ГІГўГ®Г© ГЇГ®Г¬Г®Г№Г­ГЁГЄ.')
 })
 
 // Handle the intents
-app.post('/home/', function (req, res) {
+app.post('/home', function (req, res) {
 
     console.log('Request from DialogFlow:');
     console.log(req.body);
@@ -44,7 +44,7 @@ app.post('/home/', function (req, res) {
     if (intent === 'inform_task_description') {
         var taskDescription = req.body.result.parameters.task;
         addTask(taskDescription);
-        botSpeech = 'Добавление задачи.';
+        botSpeech = 'Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г§Г Г¤Г Г·ГЁ.';
     }
     else if (intent === 'list_all_tasks') {
 
