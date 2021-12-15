@@ -37,7 +37,8 @@ app.post('/home', function (req, res) {
     console.log('Request from DialogFlow:');
     console.log(req.body);
     
-    var intent = req.body.queryResult.metadata.intentName;
+   // var intent = req.body.queryResult.metadata.intentName;
+    var intent = req.body.queryResult.intent.displayName;
     var botSpeech = 'hello world';
     
     if (intent === 'inform_task_description'){
