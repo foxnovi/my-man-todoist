@@ -4,13 +4,13 @@
 * Google Home 
 */
 
-const request = require('request');
-const syncrequest = require('sync-request');
-const express = require('express');
-const bodyParser = require('body-parser');
+const request = require('request')
+const syncrequest = require('sync-request')
+const express = require('express')
+const bodyParser = require('body-parser')
 const moment = require('moment');
 
-const uuid = require('node-uuid');
+const uuid = require('node-uuid')
 const todoist_token = '6ca51c23a14910bbfdbc28c93ae9ddb5f18cf1c6';
 
 
