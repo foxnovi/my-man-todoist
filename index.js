@@ -29,11 +29,11 @@ app.use(express.static('public'))
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Ïðèâåò, ÿ òâîé ïîìîùíèê.')
+    res.send('Hi')
 })
 
 // Handle the intents
-app.post('/', function (req, res) {
+app.post('home/', function (req, res) {
 
     console.log('Request from DialogFlow:');
     console.log(req.body);
