@@ -53,18 +53,18 @@ app.post('/home', function (req, res) {
     
     var out = {speech: botSpeech,
             displayText: botSpeech,
-            data: null};
+            data: null}
     
     var outString = JSON.stringify(out);
     console.log('Out:' + outString);
     
     res.send(outString);
-})
+});
 
 // Spin up the server
 app.listen(app.get('port'), function() {
-    console.log('running on port', app.get('port'))
-})
+    console.log('running on port', app.get('port'));
+});
 
 
 function addTask(taskDescription){
