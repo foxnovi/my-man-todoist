@@ -51,51 +51,7 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    var out = {
-      fulfillment_messages: [
-        {
-          text: {
-            //fulfillment text response to be sent to the agent
-            text: botSpeech,
-          },
-        },
-      ],
-    };
-    response.json(out);
-    /*return res.json( {
-  "telegram": {
-    "text": botSpeech,
-    "parse_mode": "Markdown"
-  }
- });*/
-    
-   /* return res.json(
-    {
-  "webhookPayload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": botSpeech
-            }
-          },
-          {
-            "simpleResponse": {
-              "textToSpeech": botSpeech
-            }
-          }
-        ]
-      }
-    }
-  }
-}); */
-    /*var outString = JSON.stringify(out);
-    console.log('Out:' + outString);
-    
-    console.log(out);*/
-    
+    response.json(botSpeech);
     
 });
 
