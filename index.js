@@ -53,6 +53,10 @@ app.post('/home', function (req, res) {
     }
     
     var out = botSpeech;
+    res.send(out)
+    
+    
+    
   /*var out = { textToSpeech: botSpeech,
             ssml: botSpeech,
             displayText: botSpeech}
@@ -63,10 +67,11 @@ app.post('/home', function (req, res) {
     })
     
     var outString = JSON.stringify(out);
-    console.log('Out:' + outString);*/
+    console.log('Out:' + outString);
+    
     console.log(out);
     
-    res.send(out);
+    res.send(out);*/
 });
 
 // Spin up the server
