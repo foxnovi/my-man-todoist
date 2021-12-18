@@ -52,13 +52,10 @@ app.post('/home', function (req, res) {
         
     }
     
-    console.log(
-    {"text": botSpeech}
-    );
-    /* return res.json(
-    { "telegram": {
-         "text": botSpeech
-       }}); */
+    return res.json(
+    { telegram: {
+         text: botSpeech
+       }});
     
    /* return res.json(
     {
