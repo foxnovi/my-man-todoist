@@ -56,8 +56,9 @@ app.post('/home', function (req, res) {
             ssml: botSpeech,
             displayText: botSpeech}*/
     var out = new SimpleResponse({
-      speech: botSpeech,
-      text: botSpeech
+      textToSpeech: botSpeech,
+      ssml: botSpeech,
+      displayText: botSpeech
     })
     
     var outString = JSON.stringify(out);
