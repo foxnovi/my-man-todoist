@@ -51,10 +51,14 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-     return res.json(
+    
+    console.log(
+    {"text": botSpeech}
+    );
+    /* return res.json(
     { "telegram": {
          "text": botSpeech
-       }}); 
+       }}); */
     
    /* return res.json(
     {
