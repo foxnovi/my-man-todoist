@@ -52,27 +52,18 @@ app.post('/home', function (req, res) {
         
     }
     
-    var out = botSpeech;
-    res.send(out)
-    
-    
-    
-  /*var out = { textToSpeech: botSpeech,
+
+  var out = { textToSpeech: botSpeech,
             ssml: botSpeech,
-            displayText: botSpeech}
-    var out = new SimpleResponse({
-      textToSpeech: botSpeech,
-      ssml: botSpeech,
-      displayText: botSpeech
-    })
-    
-    var outString = JSON.stringify(out);
+            displayText: botSpeech};
+
+    /*var outString = JSON.stringify(out);
     console.log('Out:' + outString);
     
-    console.log(out);
+    console.log(out);*/
     
     res.send(out);
-});*/
+});
 
 // Spin up the server
 app.listen(app.get('port'), function() {
