@@ -51,32 +51,12 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
+     return res.json(
+    { "telegram": {
+         "text": botSpeech
+       }}); 
     
-
-  /*var out = {
-            payload: {
-                google: {
-                    expectUserResponse: true,
-                    richResponse: {
-                        items: [
-                            {
-                                simpleResponse: {
-                                    ssml: 'hi i am vamsi',
-                                }
-                            }
-                        ]
-                    },
-                },
-            },
-        };
-      
-      
-      { textToSpeech: botSpeech,
-            ssml: botSpeech,
-            displayText: botSpeech};
-    res.send(out);*/
-    
-    return res.json(
+   /* return res.json(
     {
   "webhookPayload": {
     "google": {
@@ -97,7 +77,7 @@ app.post('/home', function (req, res) {
       }
     }
   }
-}); 
+}); */
     /*var outString = JSON.stringify(out);
     console.log('Out:' + outString);
     
