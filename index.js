@@ -51,6 +51,7 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
+    console.log('Out:' + botSpeech);
     res.send("TEXT");
     
 });
