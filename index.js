@@ -61,7 +61,7 @@ app.post('/home', function (req, res) {
         },
       ],
     };
-    response.send(out);
+    response.json(out);
     /*return res.json( {
   "telegram": {
     "text": botSpeech,
