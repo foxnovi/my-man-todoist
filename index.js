@@ -52,10 +52,12 @@ app.post('/home', function (req, res) {
         
     }
     
-    return res.json(
-    { telegram: {
-         text: botSpeech
-       }});
+    return res.json( {
+  "telegram": {
+    "text": botSpeech,
+    "parse_mode": "Markdown"
+  }
+ });
     
    /* return res.json(
     {
