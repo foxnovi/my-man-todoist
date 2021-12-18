@@ -53,16 +53,40 @@ app.post('/home', function (req, res) {
     }
     
 
-  var out = { textToSpeech: botSpeech,
+  */var out = {
+            payload: {
+                google: {
+                    expectUserResponse: true,
+                    richResponse: {
+                        items: [
+                            {
+                                simpleResponse: {
+                                    ssml: 'hi i am vamsi',
+                                }
+                            }
+                        ]
+                    },
+                },
+            },
+        };
+      
+      
+      { textToSpeech: botSpeech,
             ssml: botSpeech,
             displayText: botSpeech};
-
+    res.send(out);*/
+    
+    return res.json({
+        textToSpeech: botSpeech,
+        ssml: botSpeech,
+        displayText: botSpeech
+    }); 
     /*var outString = JSON.stringify(out);
     console.log('Out:' + outString);
     
     console.log(out);*/
     
-    res.send(out);
+    
 });
 
 // Spin up the server
