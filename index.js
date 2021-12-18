@@ -76,11 +76,28 @@ app.post('/home', function (req, res) {
             displayText: botSpeech};
     res.send(out);*/
     
-    return res.json({
-        textToSpeech: botSpeech,
-        ssml: botSpeech,
-        displayText: botSpeech
-    }); 
+    return res.json(
+    {
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": botSpeech
+            }
+          },
+          {
+            "simpleResponse": {
+              "textToSpeech": botSpeech
+            }
+          }
+        ]
+      }
+    }
+  }
+}); 
     /*var outString = JSON.stringify(out);
     console.log('Out:' + outString);
     
