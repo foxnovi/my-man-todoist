@@ -71,8 +71,8 @@ app.post('/home', function (req, res) {
     
     console.log(out);
     
-    res.send(out);*/
-});
+    res.send(out);
+});*/
 
 // Spin up the server
 app.listen(app.get('port'), function() {
