@@ -52,19 +52,21 @@ app.post('/home', function (req, res) {
         
     }
     
-   var out = { textToSpeech: botSpeech,
+    var out = botSpeech;
+  /*var out = { textToSpeech: botSpeech,
             ssml: botSpeech,
             displayText: botSpeech}
-    /*var out = new SimpleResponse({
+    var out = new SimpleResponse({
       textToSpeech: botSpeech,
       ssml: botSpeech,
       displayText: botSpeech
-    })*/
+    })
     
     var outString = JSON.stringify(out);
-    console.log('Out:' + outString);
+    console.log('Out:' + outString);*/
+    console.log(out);
     
-    res.send(outString);
+    res.send(out);
 });
 
 // Spin up the server
