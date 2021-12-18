@@ -51,7 +51,17 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    response.send(botSpeech);
+    var out = {
+      fulfillment_messages: [
+        {
+          text: {
+            //fulfillment text response to be sent to the agent
+            text: botSpeech,
+          },
+        },
+      ],
+    };
+    response.send(out);
     /*return res.json( {
   "telegram": {
     "text": botSpeech,
