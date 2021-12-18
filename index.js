@@ -78,7 +78,7 @@ app.post('/home', function (req, res) {
     
     return res.json(
     {
-  "payload": {
+  "webhookPayload": {
     "google": {
       "expectUserResponse": true,
       "richResponse": {
