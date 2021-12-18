@@ -52,14 +52,14 @@ app.post('/home', function (req, res) {
         
     }
     
-   /* var out = { textToSpeech: botSpeech,
+   var out = { textToSpeech: botSpeech,
             ssml: botSpeech,
-            displayText: botSpeech}*/
-    var out = new SimpleResponse({
+            displayText: botSpeech}
+    /*var out = new SimpleResponse({
       textToSpeech: botSpeech,
       ssml: botSpeech,
       displayText: botSpeech
-    })
+    })*/
     
     var outString = JSON.stringify(out);
     console.log('Out:' + outString);
