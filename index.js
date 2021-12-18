@@ -51,13 +51,13 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    
-    return res.json( {
+    return botSpeech;
+    /*return res.json( {
   "telegram": {
     "text": botSpeech,
     "parse_mode": "Markdown"
   }
- });
+ });*/
     
    /* return res.json(
     {
