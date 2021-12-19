@@ -52,7 +52,7 @@ app.post('/home', function (req, res) {
         
     }
     console.log('Out:' + botSpeech);
-    res.send("TEXT");
+    res.send(JSON.stringify(text: "TEXT"););
     
 });
 
