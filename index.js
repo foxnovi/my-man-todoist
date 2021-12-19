@@ -52,19 +52,9 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    //var out = {speech: botSpeech,
-           // displayText: botSpeech,
-           // data: null};
-      var out = {
-      fulfillment_messages: [
-        {
-          text: {
-            //fulfillment text response to be sent to the agent
-            text: botSpeech,
-          },
-        },
-      ],
-    };
+    var out = {speech: botSpeech,
+            displayText: botSpeech,
+            data: null};
     console.log('Out:' + out);
     res.send(JSON.stringify(out));
     
