@@ -9,6 +9,7 @@ const syncrequest = require('sync-request')
 const express = require('express')
 const bodyParser = require('body-parser')
 const moment = require('moment');
+const {dialogflow, SimpleResponse} = require('actions-on-google');
 
 const uuid = require('node-uuid')
 const todoist_token = '6ca51c23a14910bbfdbc28c93ae9ddb5f18cf1c6';
@@ -51,9 +52,19 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    var out = {speech: botSpeech,
-            displayText: botSpeech,
-            data: null};
+    //var out = {speech: botSpeech,
+           // displayText: botSpeech,
+           // data: null};
+      var out = {
+      fulfillment_messages: [
+        {
+          text: {
+            //fulfillment text response to be sent to the agent
+            text: botSpeech,
+          },
+        },
+      ],
+    };
     console.log('Out:' + out);
     res.send(JSON.stringify(out));
     
