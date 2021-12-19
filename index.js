@@ -52,20 +52,9 @@ app.post('/home', function (req, res) {
         
     }
     var out = {
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": botSpeech,
-              "displayText": botSpeech
-            }
-          }
-        ]
-      }
-    }
+  "telegram": {
+    "text": botSpeech,
+    "parse_mode": "Markdown"
   }
 };
     console.log('Out:' + out);
