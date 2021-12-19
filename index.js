@@ -51,9 +51,23 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    var out = {speech: botSpeech,
-            displayText: botSpeech,
-            data: null};
+    var out = {
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": botSpeech,
+              "displayText": "botSpeech
+            }
+          }
+        ]
+      }
+    }
+  }
+};
     console.log('Out:' + out);
     res.send(JSON.stringify(out));
     
