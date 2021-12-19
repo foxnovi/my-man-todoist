@@ -60,7 +60,7 @@ app.post('/home', function (req, res) {
           {
             "simpleResponse": {
               "textToSpeech": botSpeech,
-              "displayText": "botSpeech
+              "displayText": botSpeech
             }
           }
         ]
