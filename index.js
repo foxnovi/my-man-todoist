@@ -51,8 +51,11 @@ app.post('/home', function (req, res) {
         botSpeech = getAllTasks();
         
     }
-    console.log('Out:' + botSpeech);
-    res.send(JSON.stringify(text: "TEXT"););
+    var out = {speech: botSpeech,
+            displayText: botSpeech,
+            data: null};
+    console.log('Out:' + out);
+    res.send(JSON.stringify(out));
     
 });
 
