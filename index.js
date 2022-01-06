@@ -11,7 +11,7 @@ const bodyParser = require('body-parser')
 const moment = require('moment');
 
 const uuid = require('node-uuid')
-const todoist_token = '6ca51c23a14910bbfdbc28c93ae9ddb5f18cf1c6';
+const todoist_token = '6ca51c23a10bbfdbc28c93ae9ddb5f18cf1c6';
 
 
 const app = express()
